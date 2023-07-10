@@ -8,6 +8,7 @@ body {
   color: #FDFCFB; /* Color secundario */
   text-align: center; /* Centrar el texto */
   position: relative; /* Asegurar que el elemento ::before se posicione correctamente */
+  z-index: 0; /* Establecer el z-index en 0 */
 }
 
 body::before {
@@ -21,19 +22,6 @@ body::before {
   z-index: -1; /* Colocar la superposición detrás del contenido */
 }
 
-h1, h2 {
-  color: #FDFCFB; /* Color secundario */
-  text-align: center; /* Centrar el texto */
-}
-
-header {
-  color: #FDFCFB; /* Cambiar el color del texto del encabezado */
-}
-
-footer {
-  color: #FDFCFB; /* Cambiar el color del texto del footer */
-}
-
 #main {
   display: flex; /* Aplicar flexbox */
   flex-direction: column; /* Apilar los elementos verticalmente */
@@ -41,6 +29,8 @@ footer {
   align-items: center; /* Centrar horizontalmente los elementos */
   padding: 20px;
   text-align: center; /* Centrar el texto */
+  position: relative; /* Asegurar que el z-index funcione correctamente */
+  z-index: 1; /* Colocar el contenido por encima de la superposición */
 }
 
 #img-div {
@@ -145,4 +135,12 @@ footer {
   #image {
     max-height: 200px;
   }
+}
+
+#more-info-text {
+  color: #FDFCFB;
+}
+
+#heading {
+  color: #FDFCFB;
 }
